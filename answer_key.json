@@ -1,0 +1,23 @@
+{
+  "Human Resources": {
+    "headcount": 63,
+    "leavers": 12,
+    "attrition_rate_pct": 19.0,
+    "avg_years_at_company": 7.24,
+    "overtime_pct": 27.0
+  },
+  "Research & Development": {
+    "headcount": 961,
+    "leavers": 133,
+    "attrition_rate_pct": 13.8,
+    "avg_years_at_company": 6.86,
+    "overtime_pct": 28.2
+  },
+  "Sales": {
+    "headcount": 446,
+    "leavers": 92,
+    "attrition_rate_pct": 20.6,
+    "avg_years_at_company": 7.28,
+    "overtime_pct": 28.7
+  }
+}

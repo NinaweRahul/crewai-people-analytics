@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+WA_Fn-UseC_-HR-Employee-Attrition.csv
+hr_employees_trimmed.csv
+evidence/raw_run.log

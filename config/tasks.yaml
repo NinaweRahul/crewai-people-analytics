@@ -1,0 +1,32 @@
+# tasks.yaml
+# Task definitions. "agent" names an entry in agents.yaml.
+# "context" lists earlier tasks whose output this task receives.
+
+analysis_task:
+  description: >-
+    Call department_stats and report, for each department: headcount,
+    leavers, attrition_rate_pct, avg_years_at_company, and overtime_pct,
+    exactly as the tool returns them.
+  expected_output: A table with one row per department and the five metrics.
+  agent: analyst
+
+writing_task:
+  description: >-
+    Write a 150-word executive summary: which departments have the highest
+    attrition, how overtime relates to it, and one recommendation. Quote
+    exact numbers from the analysis. Do not claim a relationship between
+    variables unless the numbers clearly support it.
+  expected_output: A short markdown executive summary with exact figures.
+  agent: writer
+  context: [analysis_task]
+
+checking_task:
+  description: >-
+    Call department_stats yourself and verify the executive summary. Verify
+    every number AND every comparison or ranking claim. Output two
+    sections: (1) CORRECTED SUMMARY with all numbers fixed and any
+    unsupported claim rewritten, and (2) CORRECTIONS MADE listing each
+    number or claim you changed, old and new. If nothing was wrong, say so.
+  expected_output: Two markdown sections, CORRECTED SUMMARY and CORRECTIONS MADE.
+  agent: checker
+  context: [analysis_task, writing_task]
