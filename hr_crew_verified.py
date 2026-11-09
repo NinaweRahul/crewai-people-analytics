@@ -49,7 +49,7 @@ WRITER_TASK = (
     "claim has kind 'metric', department, metric, and value. A ranking "
     "claim has kind 'ranking', department, metric, and position (highest "
     "or lowest). Metric names must be exactly: headcount, leavers, "
-    "attrition_rate_pct, avg_years_at_company, overtime_pct."
+    "attrition_rate_pct, avg_years_at_company, overtime_pct." 
 )
 
 
